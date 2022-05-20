@@ -1,5 +1,8 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Tote } from "react-router-dom"
 import './App.css';
+import Gamelist from './components/gameList/gameList';
+import Data from './components/gameInfo/gameInfo';
 
 function App() {
   return (
@@ -7,6 +10,18 @@ function App() {
       <header className="App-header">
         <h1>The Gaming Library</h1>
       </header>
+      <div>
+        <Data />
+
+      </div>
+
+
+
+
+
+
+
+
     </div>
   );
 }
