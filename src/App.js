@@ -9,13 +9,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to='/'>
-          <h1>The Gaming Library</h1>
-        </Link>
+        <h1>React-Game Collection</h1>
       </header>
-
+      <Link to='/'>
+        <button className='gaming'>The Gaming Library</button>
+      </Link>
       <Link to='/Games'>
-        <h1>Games</h1>
+        <button className='collection'>Games</button>
       </Link>
 
 
@@ -26,6 +26,7 @@ function App() {
 
       <main>
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/Games' element={<Games />} />
         </Routes>
       </main>
