@@ -6,23 +6,20 @@ import Games from './components/gameInfo/gameInfo';
 
 function App() {
 
+
+///////////////////////////////////////////////////////////////
   return (
     <div className="App">
       <header className="App-header">
         <h1>React-Game Collection</h1>
       </header>
+      <div> </div>
       <Link to='/'>
         <button className='gaming'>The Gaming Library</button>
       </Link>
       <Link to='/Games'>
         <button className='collection'>Games</button>
       </Link>
-
-
-
-
-
-
 
       <main>
         <Routes>
