@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import { Routes , Route, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-// import Gamelist from './components/gameList/gameList';
+import Home from './components/Home/Home';
 import Games from './components/gameInfo/gameInfo';
 
 function App() {
@@ -9,15 +9,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>The Gaming Library</h1>
+        <Link to='/'>
+          <h1>The Gaming Library</h1>
+        </Link>
       </header>
 
-      <Link to ='/Games'>
+      <Link to='/Games'>
         <h1>Games</h1>
-        </Link>
-
-
-
+      </Link>
 
 
 
@@ -26,11 +25,10 @@ function App() {
 
 
       <main>
-  <Routes>
-  <Route path='/Games' element={<Games/>} />
-  </Routes>
-</main>
-
+        <Routes>
+          <Route path='/Games' element={<Games />} />
+        </Routes>
+      </main>
     </div>
   );
 }
