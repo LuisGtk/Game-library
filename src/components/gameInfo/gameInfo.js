@@ -1,7 +1,7 @@
 // import axios from "axios"
 import React, { useState } from "react";
 
-export default function Data() {
+export default function Games() {
 
     const [gameData, setgameData] = useState();
     const apiURL = ("https://www.freetogame.com/api/games");

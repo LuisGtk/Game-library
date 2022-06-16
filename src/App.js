@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Routes , Route, Link } from 'react-router-dom';
 import './App.css';
 // import Gamelist from './components/gameList/gameList';
-import Data from './components/gameInfo/gameInfo';
+import Games from './components/gameInfo/gameInfo';
 
 function App() {
 
@@ -12,6 +12,9 @@ function App() {
         <h1>The Gaming Library</h1>
       </header>
 
+      <Link to ='/Games'>
+        <h1>Games</h1>
+        </Link>
 
 
 
@@ -24,7 +27,7 @@ function App() {
 
       <main>
   <Routes>
-  <Route path='/Games' element={<Data/>} />
+  <Route path='/Games' element={<Games/>} />
   </Routes>
 </main>
 
