@@ -12,15 +12,17 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>React-Game Collection</h1>
-      </header>
-      <div> </div>
+      <div className='flex'>
       <Link to='/'>
         <button className='gaming'>The Gaming Library</button>
       </Link>
       <Link to='/Games'>
         <button className='collection'>Games</button>
       </Link>
+      </div>
+      </header>
 
+      
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
