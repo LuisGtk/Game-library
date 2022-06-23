@@ -13,6 +13,11 @@ export default function Home() {
                 // converting json response into a variable
                 const game = await res.json();
                 console.log(game)
+                //dotting into the first object
+                const objectData = Object.values(game)[0];
+                // adding object values  into objectData variable
+                setGame(objectData);
+                console.log(objectData);
             } catch (err) {
                 console.error(err)
             }
