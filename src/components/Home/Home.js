@@ -1,7 +1,7 @@
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
-const [game, setGame] = useState([]);
+    const [game, setGame] = useState([]);
 
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
@@ -20,7 +20,16 @@ const [game, setGame] = useState([]);
         getGame();
     }, [])
 
-        return (
-        <h2>Recent Releases</h2>
-    )
+    return game.length > 0 ? (
+        <section className='container'>
+            {game.length &&
+                game.map((game) => {
+                    return (
+                        <p>{game.title}</p>
+                    );
+                })}
+        </section>
+    ) : (
+        <h1>loading...</h1>
+    );
 }
