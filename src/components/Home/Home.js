@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css';
 
 export default function Home() {
     const [game, setGame] = useState([]);
@@ -30,12 +32,12 @@ export default function Home() {
             {game.length &&
                 game.map((game) => {
                     return (
-                        <div className='container'> 
-                        <h1>{game.title}</h1>
-                        <p>{game.platform}</p>
-                        <p>{game.release_date}</p>
-                        <img src={game.thumbnail}></img>
+                        <div className='layout'>
+                            <img className='gamePic' src={game.thumbnail}></img>
+                            <h1>{game.title}</h1>
+                            <p>{game.platform}</p>
                         </div>
+
                     );
                 })}
         </section>
