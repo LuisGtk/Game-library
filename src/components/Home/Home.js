@@ -32,13 +32,15 @@ export default function Home() {
             {game.length &&
                 game.map((game) => {
                     return (
-                        <div className='layout'>
+                        <Link className='cards' to='/'>
+                            <div className='layout'>
                             <img className='gamePic' src={game.thumbnail}></img>
-                            <h1>{game.title}</h1>
-                            <p>{game.platform}</p>
-                        </div>
-
+                                <h1>{game.title}</h1>
+                                <p>{game.platform}</p>
+                            </div>
+                        </Link>
                     );
+
                 })}
         </section>
     ) : (
