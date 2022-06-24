@@ -32,7 +32,7 @@ export default function Home() {
             {game.length &&
                 game.map((game) => {
                     return (
-                        <Link className='cards' to='/'>
+                        <Link className='/gameInfo' to='/Favorites'>
                             <div className='layout'>
                             <img className='gamePic' src={game.thumbnail}></img>
                                 <h1>{game.title}</h1>
