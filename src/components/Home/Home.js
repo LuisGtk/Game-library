@@ -14,7 +14,7 @@ export default function Home() {
                 const game = await res.json();
                 console.log(game)
                 //dotting into the first object
-                const objectData = Object.values(game)[0];
+                const objectData = Object.values(game);
                 // adding object values  into objectData variable
                 setGame(objectData);
                 console.log(objectData);
@@ -30,7 +30,12 @@ export default function Home() {
             {game.length &&
                 game.map((game) => {
                     return (
-                        <p>{game.title}</p>
+                        <div className='container'> 
+                        <h1>{game.title}</h1>
+                        <p>{game.platform}</p>
+                        <p>{game.release_date}</p>
+                        {/* <img>{game.thumbnail}</img> */}
+                        </div>
                     );
                 })}
         </section>

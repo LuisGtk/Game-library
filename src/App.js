@@ -2,29 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
-import Games from './components/gameInfo/gameInfo';
+import Favorites from './components/gameInfo/gameInfo';
+
 
 function App() {
-
 
   ///////////////////////////////////////////////////////////////
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React-Game Collection</h1>
-        {/* <div className='flex'>
-          <Link to='/'>
-            <button className='gaming'>The Gaming Library</button>
+        <Link className='homeBtn' to='/'>
+          <h1>React-Game Collection</h1>
+        </Link>
+        <div className='flex'>
+          <Link to='/Favorites'>
+            <button className='collection'>Favorites</button>
           </Link>
-          <Link to='/Games'>
-            <button className='collection'>Games</button>
-          </Link>
-        </div> */}
+        </div>
       </header>
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/Games' element={<Games />} />
+          <Route path='/Favorites' element={<Favorites />} />
         </Routes>
       </main>
     </div>
