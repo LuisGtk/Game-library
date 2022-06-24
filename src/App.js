@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
-import gameInfo from './components/gameInfo/gameInfo';
+import GameInfo from './components/GameInfo/GameInfo';
 import Favorites from './components/Favorites/Favorites';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/gameInfo' element={<gameInfo />} />
+          <Route path='/GameInfo' element={<GameInfo />} />
           <Route path='/Favorites' element={<Favorites />} />
         </Routes>
       </main>

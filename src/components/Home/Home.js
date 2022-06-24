@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+
 import './Home.css';
 
 export default function Home() {
@@ -32,9 +33,9 @@ export default function Home() {
             {game.length &&
                 game.map((game) => {
                     return (
-                        <Link className='/gameInfo' to='/Favorites'>
+                        <Link className='cards' to='/GameInfo'>
                             <div className='layout'>
-                            <img className='gamePic' src={game.thumbnail}></img>
+                                <img className='gamePic' src={game.thumbnail}></img>
                                 <h1>{game.title}</h1>
                                 <p>{game.platform}</p>
                             </div>
@@ -42,7 +43,13 @@ export default function Home() {
                     );
 
                 })}
+            {/* <Routes>
+
+                <Route path='/GameInfo' element={<GameInfo />} />
+
+            </Routes> */}
         </section>
+
     ) : (
         <h1>loading...</h1>
     );

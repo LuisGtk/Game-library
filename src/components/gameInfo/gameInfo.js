@@ -1,13 +1,13 @@
-// import axios from "axios"
+
 import React, { useState } from "react";
 
-export default function gameInfo() {
+export default function GameInfo() {
 
 
 
     return (
         <div>
-            <h1>whatever</h1>
+            <h1>hello from the game info</h1>
         </div>
     )
 }
