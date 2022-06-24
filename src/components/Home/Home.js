@@ -34,7 +34,7 @@ export default function Home() {
                         <h1>{game.title}</h1>
                         <p>{game.platform}</p>
                         <p>{game.release_date}</p>
-                        {/* <img>{game.thumbnail}</img> */}
+                        <img src={game.thumbnail}></img>
                         </div>
                     );
                 })}
