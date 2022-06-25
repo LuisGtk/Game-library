@@ -1,7 +1,28 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function GameInfo() {
+    const [info, setInfo] = useState([]);
+
+
+
+    useEffect(() => {
+        const getInfo = async () => {
+            const apiURL = "https://www.freetogame.com/api/games"
+
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

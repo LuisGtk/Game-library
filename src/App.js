@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-<Link className='homeBtn' to = '/'>
-        <h1>React-Game Collection</h1>
- </Link>
+        <Link className='homeBtn' to='/'>
+          <h1>React-Game Collection</h1>
+        </Link>
         <div className='flex'>
           <Link to='/Favorites'>
             <button className='collection'>Favorites</button>

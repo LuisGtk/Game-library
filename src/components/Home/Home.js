@@ -1,15 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Home.css';
 
 export default function Home() {
     const [game, setGame] = useState([]);
+    const gameSearch = {
+        key: process.env.REACT_APP_API_KEY,
+        url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
+        api: "?rapidapi-key=",
+      };
+
+  console.log(process.env.REACT_APP_API_KEY);
 
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
         const getGame = async () => {
-            const apiURL = "https://www.freetogame.com/api/games"
+            const apiURL = `${gameSearch.url}${gameSearch.api}${gameSearch.key}`;
             try {
                 // fetch data from link
                 const res = await fetch(apiURL);
@@ -27,7 +34,8 @@ export default function Home() {
         };
         getGame();
     }, [])
-
+    // const sortedCharacters = game.sort((a, b ) => (a + b))
+    // console.log(sortedCharacters)
     return game.length > 0 ? (
         <section className='container'>
             {game.length &&
@@ -36,20 +44,17 @@ export default function Home() {
                         <Link className='cards' to='/GameInfo'>
                             <div className='layout'>
                                 <img className='gamePic' src={game.thumbnail}></img>
-                                <h1>{game.title}</h1>
-                                <p>{game.platform}</p>
+                                    <h1>{game.title}</h1>
+                                    <p>{game.platform}</p>
+                                <label>
+                                <p>{game.description}</p>
+                                </label>
                             </div>
                         </Link>
                     );
 
                 })}
-            {/* <Routes>
-
-                <Route path='/GameInfo' element={<GameInfo />} />
-
-            </Routes> */}
         </section>
-
     ) : (
         <h1>loading...</h1>
     );
