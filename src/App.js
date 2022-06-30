@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import Search from './components/Search/Search';
 import Home from './components/Home/Home';
-import GameInfo from './components/GameInfo/GameInfo';
+// import GameInfo from './components/GameInfo/GameInfo';
 import Favorites from './components/Favorites/Favorites';
 
 function App() {
@@ -20,13 +21,11 @@ function App() {
           </Link>
         </div>
       </header>
-      {/* <div className='search'> */}
-      {/* <input className ="search" type="text" placeholder="Search..."></input> */}
-      {/* </div> */}
+      <Search />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/GameInfo' element={<GameInfo />} />
+          {/* <Route path='/GameInfo' element={<GameInfo />} /> */}
           <Route path='/Favorites' element={<Favorites />} />
         </Routes>
       </main>

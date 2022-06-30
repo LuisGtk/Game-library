@@ -5,7 +5,7 @@ import './Home.css';
 
 export default function Home() {
     const [game, setGame] = useState([]);
-    const gameSearch = {
+    const games = {
         key: process.env.REACT_APP_API_KEY,
         url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
         api: "?rapidapi-key=",
@@ -14,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
         const getGame = async () => {
-            const apiURL = `${gameSearch.url}${gameSearch.api}${gameSearch.key}`;
+            const apiURL = `${games.url}${games.api}${games.key}`;
             try {
                 // fetch data from link
                 const res = await fetch(apiURL);
