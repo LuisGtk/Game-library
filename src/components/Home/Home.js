@@ -9,9 +9,10 @@ export default function Home() {
         key: process.env.REACT_APP_API_KEY,
         url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
         api: "?rapidapi-key=",
-      };
+        sortBy:``
+    };
 
-  console.log(process.env.REACT_APP_API_KEY);
+    console.log(process.env.REACT_APP_API_KEY);
 
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
@@ -44,10 +45,10 @@ export default function Home() {
                         <Link className='cards' to='/GameInfo'>
                             <div className='layout'>
                                 <img className='gamePic' src={game.thumbnail}></img>
-                                    <h1>{game.title}</h1>
-                                    <p>{game.platform}</p>
+                                <h1>{game.title}</h1>
+                                <p>{game.platform}</p>
                                 <label>
-                                <p>{game.description}</p>
+                                    <p>{game.description}</p>
                                 </label>
                             </div>
                         </Link>
