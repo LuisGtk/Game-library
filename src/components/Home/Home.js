@@ -9,11 +9,8 @@ export default function Home() {
         key: process.env.REACT_APP_API_KEY,
         url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
         api: "?rapidapi-key=",
-        sortBy:``
+        // sortBy:`?sort-by=alphabetical`,
     };
-
-    console.log(process.env.REACT_APP_API_KEY);
-
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
         const getGame = async () => {

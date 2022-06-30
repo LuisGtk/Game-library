@@ -50,7 +50,14 @@ body {
   border-radius: 8px;
   font-size: 20px;
 }
-.homeBtn{
+
+.homeBtn {
   text-decoration: none;
   color: white;
 }
+
+/* .search {
+  padding: 12px;
+  font-size: 20px;
+  margin-left: 4%;
+} */

@@ -20,6 +20,9 @@ function App() {
           </Link>
         </div>
       </header>
+      {/* <div className='search'> */}
+      {/* <input className ="search" type="text" placeholder="Search..."></input> */}
+      {/* </div> */}
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
