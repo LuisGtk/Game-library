@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Search from './components/Search/Search';
@@ -16,9 +16,6 @@ function App() {
           <h1>React-Game Collection</h1>
         </Link>
         <div className='flex'>
-          <Link to='/Favorites'>
-            <button className='collection'>Favorites</button>
-          </Link>
         </div>
       </header>
       <Search />

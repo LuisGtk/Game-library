@@ -1,13 +1,21 @@
 import './Search.css';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-export default function Search() {
-    const [search, setSearch] = useState([]);
+export default function Search({ handleSubmit, handleChange, searchString }) {
 
     return (
-        < div className='search' >
-            <input className="search" type="text" placeholder="Search..."></input>
-        </div >
-
+        <form onSubmit={handleSubmit}>
+            <div className='search' >
+                <input
+                    className="search"
+                    type="text"
+                    placeholder="Search..."
+                    onChange={handleChange}
+                    value={searchString}
+                >
+                </input>
+                <button className='searchBtn'type='submit'>Search</button>
+            </div >
+        </form>
     )
 }

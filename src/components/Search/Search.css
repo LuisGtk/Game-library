@@ -1,5 +1,11 @@
- .search {
-     padding: 12px;
-     font-size: 20px;
-     margin-left: 4%;
- }
+.search {
+padding: 14px;
+font-size: 20px;
+margin-left: 2%;
+}
+.searchBtn {
+    border:1px solid; 
+    border-color: #696 #363 #363 #696; 
+    font-size: 20px;
+    padding: 14px;
+}
