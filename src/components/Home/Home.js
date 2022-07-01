@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Search from '../Search/Search';
+
 
 import './Home.css';
 
@@ -10,6 +12,7 @@ export default function Home() {
         api: "?rapidapi-key=",
         key: process.env.REACT_APP_API_KEY,
     };
+
     useEffect(() => {
         //async function and useEffect to convert original api to proper json format // proper array
         const getGame = async () => {
@@ -35,21 +38,20 @@ export default function Home() {
     return game.length > 0 ? (
         <section className='container'>
             {game.length &&
+                // <Search />
                 game.map((game) => {
                     return (
-                        <Link className='cards'
-                            to='/'>
-                            <div className='layout'>
-                                <img className='gamePic' alt="dataImg" src={game.thumbnail}></img>
-                                <h1>{game.title}</h1>
-                                <p>{game.platform}</p>
-                                <label>
-                                    <p>{game.description}</p>
-                                    {game.game_url}
-                                </label>
-                            </div>
-                        </Link>
-
+                        <div className='layout'>
+                            <img className='gamePic' alt="dataImg" src={game.thumbnail}></img>
+                            <h1>{game.title}</h1>
+                            <p>{game.platform}</p>
+                            <label>
+                                <p>{game.description}</p>
+                                <a className='cards' href={game.game_url}>
+                                    Click me
+                                </a>
+                            </label>
+                        </div>
                     );
                 })}
         </section>
