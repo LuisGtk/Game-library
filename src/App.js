@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Search from './components/Search/Search';
+
 // import Home from './components/Home/Home';
 
 import Favorites from './components/Favorites/Favorites';
@@ -45,6 +46,9 @@ function App() {
           <Link className='homeBtn' to='/'>
             <h1>React-Game Collection</h1>
           </Link>
+        <div className='search'>
+          < Search />
+        </div>
         </header>
       </div>
       {game.length &&
@@ -54,14 +58,13 @@ function App() {
             <div className='layout'>
               <div className=' header'>
               </div>
-              <img className='gamePic' alt="dataImg" src={game.thumbnail}></img>
-              <h1>{game.title}</h1>
+              <a className='cards' href={game.game_url}>
+                <img className='gamePic' alt="dataImg" src={game.thumbnail}></img>
+                <h1>{game.title}</h1>
+              </a>
               <p>{game.platform}</p>
               <label>
-                <p>{game.description}</p>
-                <a className='cards' href={game.game_url}>
-                  Click me
-                </a>
+                <p>{game.short_description}</p>
               </label>
             </div>
           );

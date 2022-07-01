@@ -2,10 +2,13 @@
 padding: 14px;
 font-size: 20px;
 margin-left: 2%;
+display: flex;
 }
 .searchBtn {
     border:1px solid; 
+    display: flex;
     border-color: #696 #363 #363 #696; 
     font-size: 20px;
-    padding: 14px;
+    padding: 16px;
+
 }
