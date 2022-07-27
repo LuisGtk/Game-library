@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -45,10 +46,33 @@ function App() {
         <header className="App-header">
           <Link className='homeBtn' to='/'>
             <h1>React-Game Collection</h1>
+=======
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home";
+import GameInfo from "./components/GameInfo/GameInfo";
+import Favorites from "./components/Favorites/Favorites";
+
+function App() {
+  ///////////////////////////////////////////////////////////////
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Link className="homeBtn" to="/">
+          <h1>React-Game Collection</h1>
+        </Link>
+        <div className="flex">
+          <Link to="/Favorites">
+            <button className="collection">
+              Favorites
+            </button>
+>>>>>>> 515472b (succesfully created link that directs user to site for any game clicked //didnt save code for some reason)
           </Link>
         <div className='search'>
           < Search />
         </div>
+<<<<<<< HEAD
         </header>
       </div>
       {game.length &&
@@ -74,6 +98,19 @@ function App() {
 
   ) : (
     <h1>loading...</h1>
+=======
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/GameInfo" element={<GameInfo />} />
+          <Route
+            path="/Favorites" element={<Favorites />}
+          />
+        </Routes>
+      </main>
+    </div>
+>>>>>>> 515472b (succesfully created link that directs user to site for any game clicked //didnt save code for some reason)
   );
 
 
