@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 import React, { useState } from "react";
 
 export default function GameInfo() {
@@ -9,4 +12,7 @@ export default function GameInfo() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 515472b (succesfully created link that directs user to site for any game clicked //didnt save code for some reason)
+=======
+>>>>>>> main

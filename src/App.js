@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -55,6 +56,16 @@ import GameInfo from "./components/GameInfo/GameInfo";
 import Favorites from "./components/Favorites/Favorites";
 
 function App() {
+=======
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home";
+import GameInfo from "./components/GameInfo/GameInfo";
+import Favorites from "./components/Favorites/Favorites";
+
+function App() {
+>>>>>>> main
   ///////////////////////////////////////////////////////////////
   return (
     <div className="App">
@@ -67,7 +78,10 @@ function App() {
             <button className="collection">
               Favorites
             </button>
+<<<<<<< HEAD
 >>>>>>> 515472b (succesfully created link that directs user to site for any game clicked //didnt save code for some reason)
+=======
+>>>>>>> main
           </Link>
         <div className='search'>
           < Search />
