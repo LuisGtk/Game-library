@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-
-import "./Home.css";
 
 export default function Home() {
   const [game, setGame] = useState([]);
