@@ -8,7 +8,6 @@ export default function Home() {
     url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
     api: "?rapidapi-key=",
   };
-  console.log(process.env.REACT_APP_API_KEY);
   useEffect(() => {
     //async function and useEffect to convert original api to proper json format // proper array
     const getGame = async () => {
@@ -16,12 +15,12 @@ export default function Home() {
       try {
         // fetch data from link
         const res = await fetch(apiURL);
-        // converting json response into a variable
+        // converting json response into a variable // The 'game' variable
         const game = await res.json();
         console.log(game);
         //dotting into the first object
         const objectData = Object.values(game);
-        // adding object values  into objectData variable
+        // adding object values into objectData variable
         setGame(objectData);
         console.log(objectData);
       } catch (err) {
@@ -36,16 +35,20 @@ export default function Home() {
       {game.length &&
         game.map((game) => {
           return (
-            <a href={game.game_url} >
-              <div className="layout">
+            <div className="layout">
+              <a href={game.game_url} >
                 <img
                   className="gamePic"
                   src={game.thumbnail}>
                 </img>
-                <h1>{game.title}</h1>
                 <p>{game.platform}</p>
-              </div>
-            </a>
+                <h1>{game.title}</h1>
+              </a>
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+            </div>
+
           );
         })}
     </section>
